@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lorenz & Carpinski Consultora</title>
+<!-- Agregar enlaces a Bootstrap y estilos personalizados -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  body {
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .message {
+    text-align: center;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="message">
+  <h1 class="display-4">Lorenz &amp; Carpinski Consultora</h1>
+  <p class="lead">Consultoría en Opiniones y Relaciones Públicas | Campañas Políticas y análisis técnico</p>
+</div>
+<!-- Agregar scripts de Bootstrap y JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const message = document.querySelector(".message");
+    message.style.opacity = 0;
+    message.style.transform = "translateY(20px)";
+    
+    setTimeout(function() {
+      message.style.transition = "opacity 1s, transform 1s";
+      message.style.opacity = 1;
+      message.style.transform = "translateY(0)";
+    }, 500);
+  });
+</script>
+</body>
+</html>
