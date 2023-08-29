@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lorenz & Carpinski Consultora</title>
+<!-- Agregar enlace al favicon.ico -->
+<link rel="icon" type="image/x-icon" href="https://i.imgur.com/NsPBlqk.png">
 <!-- Agregar enlaces a Bootstrap y estilos personalizados -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
@@ -12,8 +14,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
     margin: 0;
+  }
+  .logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    background-color: transparent;
   }
   .message {
     text-align: center;
@@ -22,6 +31,7 @@
 </style>
 </head>
 <body>
+<img class="logo" src="https://i.imgur.com/NsPBlqk.png" alt="Lorenz & Carpinski Consultora Logo">
 <div class="message">
   <h1 class="display-4">Lorenz &amp; Carpinski Consultora</h1>
   <p class="lead">Consultoría en Opiniones y Relaciones Públicas | Campañas Políticas y análisis técnico</p>
@@ -32,11 +42,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    const logo = document.querySelector(".logo");
     const message = document.querySelector(".message");
+    logo.style.opacity = 0;
     message.style.opacity = 0;
     message.style.transform = "translateY(20px)";
     
     setTimeout(function() {
+      logo.style.transition = "opacity 1s";
+      logo.style.opacity = 1;
+      
       message.style.transition = "opacity 1s, transform 1s";
       message.style.opacity = 1;
       message.style.transform = "translateY(0)";
